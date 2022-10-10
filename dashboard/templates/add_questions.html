@@ -1,0 +1,35 @@
+{% load static %} {% block body %} {% include 'provider_navigation.html' %}
+
+<marquee style="font-family:'Times New Roman'; font-size : 25px; color:darkcyan; background-color: black; font-weight: bold; margin-top: 1%;">
+    Add Questions
+</marquee>
+<hr>
+<form class="container mt-5" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-row">
+        <div class="form-group col-md-12">
+            <label class="font-weight-bold">Question Title</label>
+            <input type="text" class="form-control" name="quetitle" placeholder="Enter Job Title" required>
+        </div>
+        <div class="form-group col-md-12">
+            <label class="font-weight-bold">Upload Question File</label>
+            <input type="file" class="form-control" name="question" required>
+            <!--accept="image/*"-->
+        </div>
+    </div>
+
+
+
+    <input type="submit" value="Submit" class="btn btn-primary my-3" style="width:200px">
+</form>
+<br>
+<br> {% include 'footer.html' %} {% if error == "no" %}
+<script>
+    alert("Questions Details has been added Successful");
+    window.location = ("{% url 'que_list' %}")
+</script>
+{% endif %} {% if error == "yes" %}
+<script>
+    alert("Something wrong,Try Again.....");
+</script>
+{% endif %} {% endblock %}

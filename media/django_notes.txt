@@ -1,0 +1,25 @@
+django instalation :-
+-->py -m pip install Django
+-->py --version
+
+how to create new project in django
+-->django-admin startproject djangoDemo
+
+directory path
+-->D:\Neha\Msc IT\MSC IT SEM 5\DJango
+
+how to start django project
+-->python manage.py runserver
+
+
+python manage.py startapp dashboard
+
+python manage.py makemigrations
+
+python manage.py migrate
+
+python manage.py createsuperuser
+username:-admin
+email:-
+password:-admin
+confirm password:-admin

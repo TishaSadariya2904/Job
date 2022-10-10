@@ -1,0 +1,28 @@
+{% load static %} {% block body %} {% include 'user_navigation.html' %}
+
+<marquee style="font-family:'Times New Roman'; font-size : 25px; color:darkcyan; background-color: black; font-weight: bold; margin-top: 1%;">
+    Interview Questions
+</marquee>
+<hr>
+<div class="container">
+    <table class=" table table-hover " id="example">
+        <thead>
+            <tr style="background-color: aquamarine;">
+                <th>Sr.No</th>
+                <th>Question Title</th>
+                <th>Question File</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in data %}
+            <tr style="background-color: #e0a09f">
+                <td>{{ forloop.counter }}</td>
+                <td>{{ i.title }}</td>
+                <td><a href="{{ i.question.url }}">Download Questions</a></td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

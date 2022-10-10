@@ -1,0 +1,37 @@
+{% load static %} {% block body %} {% include 'user_navigation.html' %}
+
+<marquee style="font-family:'Times New Roman'; font-size : 25px; color:darkcyan; background-color: black; font-weight: bold; margin-top: 1%;">
+    Job Details
+</marquee>
+<hr>
+<div class="container shadow-lg py-2">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="{{ job.provider.image.url }}" style="width:300px; height:200px">
+        </div>
+        <div class="col-md-6">
+            <h2>{{ job.title }}</h2>
+            <p>{{ job.provider.company }}
+                <a href="{% url 'user_latest_jobs' %}">(view All Jobs)</a>
+            </p>
+            <p><i class="fa fa-map-marker mr-2"></i>{{ job.location }}</p>
+            <p><i class="fa fa-calendar mr-2"></i>{{ job.creationdate }}</p>
+            <strong><i class="fa fa-money mr-2"></i><i class="fa fa-inr mr-1"></i>{{ job.salary }}</strong>
+            <div class="mt-4">
+                <a href="{% url 'applyforjob' job.id %}" type="submit" class="btn btn-danger" style="width:200px; height:40px">Apply for this job</a>
+            </div>
+        </div>
+
+    </div>
+    <div>
+        <h4>Overview of job</h4>
+        <p>{{ job.description }}</p>
+
+        <h4>Required Experience</h4>
+        <p>{{ job.experience }} Years</p>
+
+        <h4>Required Skills</h4>
+        <p>{{ job.skills }}</p>
+    </div>
+</div>
+<br><br> {% include 'footer.html' %} {% endblock %}

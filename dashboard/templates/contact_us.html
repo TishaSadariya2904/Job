@@ -1,0 +1,40 @@
+{% load static %} {% block body %} {% include 'navigation.html' %}
+
+<marquee style="font-family:'Times New Roman'; font-size : 25px; color:darkcyan; background-color: black; font-weight: bold; margin-top: 1%;">
+    Contact Us
+</marquee>
+<hr>
+<form class="container mt-5" method="post" name="contact-us">
+    {% csrf_token %}
+    <label>First Name</label>
+    <input type="text" class="form-control" name="fname" placeholder="Enter First Name" required>
+
+    <label>Last Name</label>
+    <input type="text" class="form-control" name="lname" placeholder="Enter Last Name" required>
+
+    <label>Contact Number</label>
+    <input type="text" class="form-control" name="contact" placeholder="Enter Contact Number" required>
+
+    <label>Message</label>
+    <textarea name="message" class="form-control" placeholder="Enter Message" required></textarea>
+
+    <input type="submit" class="btn btn-primary" style="margin-top:2%; color:darkcyan; background-color:black; height:40px">
+</form>
+
+{% if error == "no" %}
+<script>
+    alert("Successful");
+    //swal("Contact Us", "Successful", "success", 100000);
+    //swal({
+    //    title: " contact us ",
+    //    text: " Successfully ",
+    //    icon: "success",
+    //    button: "ok",
+    //}, 10000000);
+    window.location = ("{% url 'index' %}")
+</script>
+{% endif %} {% if error == "yes" %}
+<script>
+    alert("Something went wrong, Try Again...");
+</script>
+{% endif %}{% include 'footer.html' %} {% endblock %}

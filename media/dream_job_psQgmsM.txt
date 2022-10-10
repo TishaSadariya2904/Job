@@ -1,0 +1,48 @@
+Group No :- 1
+-------------------
+
+Project Title:- Dream Job
+----------------------------------
+
+
+System Users:-
+--------------------
+Administrator
+Job Seeker
+Job Provider
+
+
+Project Components are below:-
+------------------------------------------
+1)REGISTER/LOGIN/LOGOUT
+2)ABOUT US
+3)CONTACT US
+5)UPDATE PROFILE
+6)MANAGE JOB SEEKER(USER)
+7)MANAGE JOB PROVIDER
+8)MANAGE JOB POST
+9)SEARCH JOB 
+10)APPLY JOB
+11)RESUME UPLOAD
+12)RESUME DOWNLOAD
+19)CHANGE PASSWORD
+20)LOGOUT
+
+
+4)Chat with us
+13)Manage Skill
+14)Feedback
+15)Test Sample(Questions)
+16)Manage Company
+17)Manage Cities
+18)Manage Placement
+
+
+
+
+GitHub Link :- https://github.com/NehaAgrawalR
+
+
+
+
+

@@ -1,0 +1,58 @@
+{% load static %} {% block body %} {% include 'navigation.html' %}
+
+<style>
+    .container {
+        max-width: 85%;
+    }
+    
+    .content {
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        color: black;
+        height: 40px;
+        width: 91%
+    }
+</style>
+
+<div class="container shadow-lg" style="background-color: white; height: 900px; margin-top:2%">
+    <h1 class="text-center text-Black">About Us</h1>
+    <h3 class="text-center text-Black">---------| Our Team Member |----------</h3>
+
+    <div class="row mt-3">
+
+        <div class="col-md-4">
+            <img src="{% static 'images/neha.jpg' %}" style="width:100% ; margin-top: 5%; height:650px; border-radius:10%">
+            <div class="content">
+                <h2>Neha Agrawal</h2>
+                <p class="title">HOD</p>
+                <p>nehuagrawal1211@gmail.com</p>
+                <p>7434889667</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <img src="{% static 'images/tisha.jpg' %}" style="width:100% ; margin-top: 5%; height:650px; border-radius:10%">
+            <div class="content">
+                <h2>Tisha Sadariya</h2>
+                <p class="title">CEO & Founder</p>
+                <p>tishasadariya0307@gmail.com</p>
+                <p>9825411257</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <img src="{% static 'images/sahu.jpg' %}" style="width:100% ; margin-top: 5%; height:650px; border-radius:10%">
+            <div class="content">
+                <h2>Neha Sahu</h2>
+                <p class="title">Designer</p>
+                <p>nehu2204@gmail.com</p>
+                <p>9905285923</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{% endblock%}
